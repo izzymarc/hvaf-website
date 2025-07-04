@@ -30,8 +30,8 @@ const staticImages: GalleryImage[] = [
   {
     id: 'static-1',
     url: '/gallery/hvaf-photo-1.jpeg',
-    title: 'Community Outreach Program',
-    description: 'HVAF team members engaging with local community members',
+    title: 'Educational Empowerment Program',
+    description: 'HVAF team celebrating with students who received educational support and scholarships',
     createdAt: new Date('2025-07-04'),
     order: 1,
     isActive: true
@@ -39,8 +39,8 @@ const staticImages: GalleryImage[] = [
   {
     id: 'static-2',
     url: '/gallery/hvaf-photo-2.jpeg',
-    title: 'Educational Support Initiative',
-    description: 'Providing educational resources and support to students',
+    title: 'School Fees Support Initiative',
+    description: 'Supporting families by covering school fees, ensuring no child is denied education due to financial constraints',
     createdAt: new Date('2025-07-04'),
     order: 2,
     isActive: true
@@ -48,8 +48,8 @@ const staticImages: GalleryImage[] = [
   {
     id: 'static-3',
     url: '/gallery/hvaf-photo-3.jpeg',
-    title: 'Healthcare Access Program',
-    description: 'Delivering healthcare services to underserved communities',
+    title: 'Student Uniform Distribution',
+    description: 'Providing quality school uniforms to help students attend classes with dignity and confidence',
     createdAt: new Date('2025-07-04'),
     order: 3,
     isActive: true
@@ -57,8 +57,8 @@ const staticImages: GalleryImage[] = [
   {
     id: 'static-4',
     url: '/gallery/hvaf-photo-4.jpeg',
-    title: 'Humanitarian Aid Distribution',
-    description: 'Distributing essential supplies to families in need',
+    title: 'Educational Supplies Distribution',
+    description: 'Distributing books, stationery, and learning materials to students in underserved communities',
     createdAt: new Date('2025-07-04'),
     order: 4,
     isActive: true
@@ -66,8 +66,8 @@ const staticImages: GalleryImage[] = [
   {
     id: 'static-5',
     url: '/gallery/hvaf-photo-5.jpg',
-    title: 'Community Development Project',
-    description: 'HVAF team working on sustainable community development initiatives',
+    title: 'Scholarship Award Ceremony',
+    description: 'Celebrating academic excellence and awarding scholarships to deserving students for higher education',
     createdAt: new Date('2025-07-04'),
     order: 5,
     isActive: true
@@ -78,8 +78,8 @@ const staticVideos: GalleryVideo[] = [
   {
     id: 'static-video-1',
     youtubeId: 'local-video-1', // Will be handled differently for local videos
-    title: 'HVAF Community Impact Documentary',
-    description: 'A documentary showcasing the impact of our community programs',
+    title: 'School Fees Payment Initiative',
+    description: 'HVAF supporting families by paying school fees for underprivileged children to ensure quality education access',
     createdAt: new Date('2025-07-04'),
     order: 1,
     isActive: true
@@ -87,8 +87,8 @@ const staticVideos: GalleryVideo[] = [
   {
     id: 'static-video-2',
     youtubeId: 'local-video-2',
-    title: 'Educational Support in Action',
-    description: 'Behind the scenes of our educational support initiatives',
+    title: 'School Uniform Distribution Program',
+    description: 'Providing new school uniforms to students in need, removing barriers to education and boosting student confidence',
     createdAt: new Date('2025-07-04'),
     order: 2,
     isActive: true
@@ -96,8 +96,8 @@ const staticVideos: GalleryVideo[] = [
   {
     id: 'static-video-3',
     youtubeId: 'local-video-3',
-    title: 'Healthcare Outreach Program',
-    description: 'Our mobile healthcare services reaching remote communities',
+    title: 'Educational Support Documentation',
+    description: 'Documenting the transformation in students\' lives through our educational assistance programs',
     createdAt: new Date('2025-07-04'),
     order: 3,
     isActive: true
@@ -105,8 +105,8 @@ const staticVideos: GalleryVideo[] = [
   {
     id: 'static-video-4',
     youtubeId: 'local-video-4',
-    title: 'Water Access Initiative',
-    description: 'Providing clean water access to underserved communities',
+    title: 'Student Scholarship Program',
+    description: 'Following the journey of scholarship recipients and the impact of educational funding on their futures',
     createdAt: new Date('2025-07-04'),
     order: 4,
     isActive: true
@@ -114,8 +114,8 @@ const staticVideos: GalleryVideo[] = [
   {
     id: 'static-video-5',
     youtubeId: 'local-video-5',
-    title: 'Skills Training Program',
-    description: 'Empowering communities through vocational skills training',
+    title: 'Back-to-School Campaign Success',
+    description: 'Celebrating the success of our back-to-school initiative that provided essential supplies to hundreds of students',
     createdAt: new Date('2025-07-04'),
     order: 5,
     isActive: true
