@@ -152,6 +152,24 @@ const staticImages: GalleryImage[] = [
     createdAt: new Date('2025-07-04'),
     order: 14,
     isActive: true
+  },
+  {
+    id: 'static-15',
+    url: '/gallery/hvaf-photo-15.jpg',
+    title: 'Academic Excellence Recognition',
+    description: 'Celebrating outstanding academic achievements and recognizing students who excel in their studies',
+    createdAt: new Date('2025-07-04'),
+    order: 15,
+    isActive: true
+  },
+  {
+    id: 'static-16',
+    url: '/gallery/hvaf-photo-16.jpg',
+    title: 'Educational Leadership Development',
+    description: 'Empowering students with leadership skills and preparing them to become future community leaders',
+    createdAt: new Date('2025-07-04'),
+    order: 16,
+    isActive: true
   }
 ];
 
