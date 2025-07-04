@@ -101,19 +101,16 @@ export const getGalleryImages = async (): Promise<GalleryImage[]> => {
       where('isActive', '==', true)
     );
     const querySnapshot = await getDocs(q);
-    const images = querySnapshot.docs.map(doc => ({
+    const firebaseImages = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
     } as GalleryImage));
     
-    // If no images from Firebase, return static images
-    if (images.length === 0) {
-      return staticImages;
-    }
-    
-    return images.sort((a, b) => a.order - b.order);
+    // Always include static images, then add Firebase images
+    const allImages = [...staticImages, ...firebaseImages];
+    return allImages.sort((a, b) => a.order - b.order);
   } catch (error) {
-    console.warn('Firebase unavailable, using static images:', error);
+    console.warn('Firebase unavailable, using static images only:', error);
     return staticImages;
   }
 };
@@ -124,19 +121,16 @@ export const getGalleryVideos = async (): Promise<GalleryVideo[]> => {
       where('isActive', '==', true)
     );
     const querySnapshot = await getDocs(q);
-    const videos = querySnapshot.docs.map(doc => ({
+    const firebaseVideos = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
     } as GalleryVideo));
     
-    // If no videos from Firebase, return static videos
-    if (videos.length === 0) {
-      return staticVideos;
-    }
-    
-    return videos.sort((a, b) => a.order - b.order);
+    // Always include static videos, then add Firebase videos
+    const allVideos = [...staticVideos, ...firebaseVideos];
+    return allVideos.sort((a, b) => a.order - b.order);
   } catch (error) {
-    console.warn('Firebase unavailable, using static videos:', error);
+    console.warn('Firebase unavailable, using static videos only:', error);
     return staticVideos;
   }
 };
