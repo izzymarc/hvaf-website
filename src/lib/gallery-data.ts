@@ -71,6 +71,87 @@ const staticImages: GalleryImage[] = [
     createdAt: new Date('2025-07-04'),
     order: 5,
     isActive: true
+  },
+  {
+    id: 'static-6',
+    url: '/gallery/hvaf-photo-6.jpg',
+    title: 'Community Education Outreach',
+    description: 'HVAF team engaging with local communities to identify students in need of educational support',
+    createdAt: new Date('2025-07-04'),
+    order: 6,
+    isActive: true
+  },
+  {
+    id: 'static-7',
+    url: '/gallery/hvaf-photo-7.jpg',
+    title: 'Student Mentorship Program',
+    description: 'One-on-one mentoring sessions helping students navigate their educational journey and career planning',
+    createdAt: new Date('2025-07-04'),
+    order: 7,
+    isActive: true
+  },
+  {
+    id: 'static-8',
+    url: '/gallery/hvaf-photo-8.jpg',
+    title: 'Educational Workshop Series',
+    description: 'Interactive workshops empowering students with essential life skills and academic excellence strategies',
+    createdAt: new Date('2025-07-04'),
+    order: 8,
+    isActive: true
+  },
+  {
+    id: 'static-9',
+    url: '/gallery/hvaf-photo-9.jpg',
+    title: 'Learning Resource Center',
+    description: 'Creating safe learning spaces with computers, books, and internet access for disadvantaged students',
+    createdAt: new Date('2025-07-04'),
+    order: 9,
+    isActive: true
+  },
+  {
+    id: 'static-10',
+    url: '/gallery/hvaf-photo-10.jpg',
+    title: 'School Infrastructure Support',
+    description: 'Supporting schools with classroom improvements and essential learning infrastructure development',
+    createdAt: new Date('2025-07-04'),
+    order: 10,
+    isActive: true
+  },
+  {
+    id: 'static-11',
+    url: '/gallery/hvaf-photo-11.jpg',
+    title: 'Student Achievement Celebration',
+    description: 'Recognizing and celebrating academic milestones and achievements of scholarship recipients',
+    createdAt: new Date('2025-07-04'),
+    order: 11,
+    isActive: true
+  },
+  {
+    id: 'static-12',
+    url: '/gallery/hvaf-photo-12.jpg',
+    title: 'Educational Technology Initiative',
+    description: 'Introducing digital learning tools and technology access to enhance educational opportunities',
+    createdAt: new Date('2025-07-04'),
+    order: 12,
+    isActive: true
+  },
+  {
+    id: 'static-13',
+    url: '/gallery/hvaf-photo-13.jpg',
+    title: 'Parent-Student Orientation',
+    description: 'Engaging parents and guardians in the educational support process and community involvement',
+    createdAt: new Date('2025-07-04'),
+    order: 13,
+    isActive: true
+  },
+  {
+    id: 'static-14',
+    url: '/gallery/hvaf-photo-14.jpg',
+    title: 'Educational Impact Assessment',
+    description: 'Documenting the transformative impact of educational support on students and their families',
+    createdAt: new Date('2025-07-04'),
+    order: 14,
+    isActive: true
   }
 ];
 
@@ -118,6 +199,51 @@ const staticVideos: GalleryVideo[] = [
     description: 'Celebrating the success of our back-to-school initiative that provided essential supplies to hundreds of students',
     createdAt: new Date('2025-07-04'),
     order: 5,
+    isActive: true
+  },
+  {
+    id: 'static-video-6',
+    youtubeId: 'local-video-6',
+    title: 'Community Education Drive',
+    description: 'Mobilizing communities to prioritize education and supporting families in overcoming educational barriers',
+    createdAt: new Date('2025-07-04'),
+    order: 6,
+    isActive: true
+  },
+  {
+    id: 'static-video-7',
+    youtubeId: 'local-video-7',
+    title: 'Student Life Transformation',
+    description: 'Real stories of students whose lives were transformed through HVAF educational support programs',
+    createdAt: new Date('2025-07-04'),
+    order: 7,
+    isActive: true
+  },
+  {
+    id: 'static-video-8',
+    youtubeId: 'local-video-8',
+    title: 'Educational Resource Distribution',
+    description: 'Mass distribution of textbooks, learning materials, and educational resources to schools',
+    createdAt: new Date('2025-07-04'),
+    order: 8,
+    isActive: true
+  },
+  {
+    id: 'static-video-9',
+    youtubeId: 'local-video-9',
+    title: 'Scholarship Award Ceremony',
+    description: 'Annual scholarship presentation ceremony celebrating academic excellence and educational achievement',
+    createdAt: new Date('2025-07-04'),
+    order: 9,
+    isActive: true
+  },
+  {
+    id: 'static-video-10',
+    youtubeId: 'local-video-10',
+    title: 'Educational Partnership Success',
+    description: 'Partnership with schools and educators to create sustainable educational support systems',
+    createdAt: new Date('2025-07-04'),
+    order: 10,
     isActive: true
   }
 ];
