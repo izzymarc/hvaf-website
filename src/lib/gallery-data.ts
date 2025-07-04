@@ -62,6 +62,15 @@ const staticImages: GalleryImage[] = [
     createdAt: new Date('2025-07-04'),
     order: 4,
     isActive: true
+  },
+  {
+    id: 'static-5',
+    url: '/gallery/hvaf-photo-5.jpg',
+    title: 'Community Development Project',
+    description: 'HVAF team working on sustainable community development initiatives',
+    createdAt: new Date('2025-07-04'),
+    order: 5,
+    isActive: true
   }
 ];
 
@@ -91,6 +100,24 @@ const staticVideos: GalleryVideo[] = [
     description: 'Our mobile healthcare services reaching remote communities',
     createdAt: new Date('2025-07-04'),
     order: 3,
+    isActive: true
+  },
+  {
+    id: 'static-video-4',
+    youtubeId: 'local-video-4',
+    title: 'Water Access Initiative',
+    description: 'Providing clean water access to underserved communities',
+    createdAt: new Date('2025-07-04'),
+    order: 4,
+    isActive: true
+  },
+  {
+    id: 'static-video-5',
+    youtubeId: 'local-video-5',
+    title: 'Skills Training Program',
+    description: 'Empowering communities through vocational skills training',
+    createdAt: new Date('2025-07-04'),
+    order: 5,
     isActive: true
   }
 ];
