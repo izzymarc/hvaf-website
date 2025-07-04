@@ -1,0 +1,295 @@
+contact us template
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Submission</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+        }
+        .header {
+            background-color: #3a5a78;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+            background: #ffffff;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #777777;
+            background: #f9f9f9;
+            border-radius: 0 0 5px 5px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-table th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+            width: 30%;
+        }
+        .message-content {
+            white-space: pre-line;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #3a5a78;
+            margin: 10px 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .data-table, .data-table tbody, .data-table tr, .data-table td {
+                display: block;
+                width: 100%;
+            }
+            .data-table th {
+                display: none;
+            }
+            .data-table td {
+                padding: 8px 15px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            .data-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>New Contact Form Submission</h1>
+            <p>You've received a new message from your website contact form</p>
+        </div>
+        
+        <div class="content">
+            <table class="data-table">
+                <tr>
+                    <th>Name:</th>
+                    <td>{{name}}</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><a href="mailto:{{email}}">{{email}}</a></td>
+                </tr>
+                <tr>
+                    <th>Phone:</th>
+                    <td>{{phone}}</td>
+                </tr>
+                <tr>
+                    <th>Subject:</th>
+                    <td>{{subject}}</td>
+                </tr>
+                <tr>
+                    <th>Organization:</th>
+                    <td>{{organization}}</td>
+                </tr>
+                <tr>
+                    <th>LGA:</th>
+                    <td>{{lga}}</td>
+                </tr>
+                <tr>
+                    <th>State:</th>
+                    <td>{{state}}</td>
+                </tr>
+                <tr>
+                    <th>Country:</th>
+                    <td>{{country}}</td>
+                </tr>
+            </table>
+            
+            <h3>Message:</h3>
+            <div class="message-content">
+                {{message}}
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This email was sent from the contact form on Humanity Verse Aid Foundation website.</p>
+            <p>&copy; 2025 Humanity Verse Aid Foundation. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+Auto Reply Template
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Contacting Humanity Verse Aid Foundation</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #3a5a78;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+        .content {
+            padding: 30px;
+            background: #ffffff;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #777777;
+            background: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3a5a78;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 25px 0;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            .button {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="https://humanityverseaidfoundation.netlify.app/logo.png" alt="Humanity Verse Aid Foundation" class="logo">
+            <h1>Thank You for Reaching Out!</h1>
+        </div>
+        
+        <div class="content">
+            <p>Dear {{name}},</p>
+            
+            <p>Thank you for contacting Humanity Verse Aid Foundation. We've received your message and appreciate you taking the time to reach out to us.</p>
+            
+            <div class="contact-info">
+                <p><strong>Your Message:</strong></p>
+                <p><em>"{{message}}"</em></p>
+            </div>
+            
+            <p>Our team is currently reviewing your inquiry and we'll get back to you as soon as possible, typically within 24-48 hours during business days.</p>
+            
+            <p>For your reference, here are the details we received:</p>
+            
+            <ul>
+                <li><strong>Name:</strong> {{name}}</li>
+                <li><strong>Email:</strong> {{email}}</li>
+                <li><strong>Subject:</strong> {{subject}}</li>
+            </ul>
+            
+            <div class="divider"></div>
+            
+            <h3>What Happens Next?</h3>
+            <ol>
+                <li>Your message has been assigned to the appropriate team member.</li>
+                <li>We'll review your inquiry and gather any necessary information.</li>
+                <li>You'll receive a personalized response from our team.</li>
+            </ol>
+            
+            <p>In the meantime, you might find answers to common questions in our <a href="https://your-website.com/faq">FAQ section</a>.</p>
+            
+            <p>If you need immediate assistance, please feel free to contact us at <a href="mailto:support@hvafoundation.org">support@hvafoundation.org</a> or call us at +1 (555) 123-4567.</p>
+            
+            <p>Thank you for your patience and for supporting our mission to make a difference.</p>
+            
+            <p>Warm regards,<br>
+            The Humanity Verse Aid Foundation Team</p>
+        </div>
+        
+        <div class="footer">
+            <p>Humanity Verse Aid Foundation<br>
+            Doka close, Narayi Highcost, Kaduna state, 800244</p>
+            
+            <p>Email: <a href="mailto:info@hvafoundation.org" style="color: #3a5a78; text-decoration: none;">info@hvafoundation.org</a><br>
+            Phone: +234 808 811 7603<br>
++234 805 099 4771</p>
+            
+            <p>
+                <a href="https://x.com/hvafoundation?t=oMXACTiiX32uX6gYmU9CMw&s=08" style="margin: 0 5px; text-decoration: none; color: #3a5a78;">Twitter</a> |
+                <a href="https://www.instagram.com/hvaf_foundation?igsh=MWFsZjBpcTdjdHlxcQ%3D%3D&utm_source=qr" style="margin: 0 5px; text-decoration: none; color: #3a5a78;">Instagram</a> |
+                <a href="https://www.tiktok.com/@humanityverseaid?_t=ZS-8wfISLIy95O&_r=1" style="margin: 0 5px; text-decoration: none; color: #3a5a78;">Tiktok</a>
+            </p>
+            
+            <p style="margin-top: 20px; font-size: 11px; color: #999999;">
+                You're receiving this email because you contacted Humanity Verse Aid Foundation through our website contact form.<br>
+                &copy; 2025 Humanity Verse Aid Foundation. All rights reserved.<br>
+                <a href="https://your-website.com/privacy" style="color: #777777; text-decoration: underline;">Privacy Policy</a> | 
+                <a href="https://your-website.com/unsubscribe" style="color: #777777; text-decoration: underline;">Unsubscribe</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
