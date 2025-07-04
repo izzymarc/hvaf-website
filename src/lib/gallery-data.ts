@@ -25,28 +25,120 @@ export interface GalleryVideo {
   isActive: boolean;
 }
 
+// Static gallery data as fallback
+const staticImages: GalleryImage[] = [
+  {
+    id: 'static-1',
+    url: '/gallery/hvaf-photo-1.jpeg',
+    title: 'Community Outreach Program',
+    description: 'HVAF team members engaging with local community members',
+    createdAt: new Date('2025-07-04'),
+    order: 1,
+    isActive: true
+  },
+  {
+    id: 'static-2',
+    url: '/gallery/hvaf-photo-2.jpeg',
+    title: 'Educational Support Initiative',
+    description: 'Providing educational resources and support to students',
+    createdAt: new Date('2025-07-04'),
+    order: 2,
+    isActive: true
+  },
+  {
+    id: 'static-3',
+    url: '/gallery/hvaf-photo-3.jpeg',
+    title: 'Healthcare Access Program',
+    description: 'Delivering healthcare services to underserved communities',
+    createdAt: new Date('2025-07-04'),
+    order: 3,
+    isActive: true
+  },
+  {
+    id: 'static-4',
+    url: '/gallery/hvaf-photo-4.jpeg',
+    title: 'Humanitarian Aid Distribution',
+    description: 'Distributing essential supplies to families in need',
+    createdAt: new Date('2025-07-04'),
+    order: 4,
+    isActive: true
+  }
+];
+
+const staticVideos: GalleryVideo[] = [
+  {
+    id: 'static-video-1',
+    youtubeId: 'local-video-1', // Will be handled differently for local videos
+    title: 'HVAF Community Impact Documentary',
+    description: 'A documentary showcasing the impact of our community programs',
+    createdAt: new Date('2025-07-04'),
+    order: 1,
+    isActive: true
+  },
+  {
+    id: 'static-video-2',
+    youtubeId: 'local-video-2',
+    title: 'Educational Support in Action',
+    description: 'Behind the scenes of our educational support initiatives',
+    createdAt: new Date('2025-07-04'),
+    order: 2,
+    isActive: true
+  },
+  {
+    id: 'static-video-3',
+    youtubeId: 'local-video-3',
+    title: 'Healthcare Outreach Program',
+    description: 'Our mobile healthcare services reaching remote communities',
+    createdAt: new Date('2025-07-04'),
+    order: 3,
+    isActive: true
+  }
+];
+
 export const getGalleryImages = async (): Promise<GalleryImage[]> => {
-  const q = query(publicImagesCollection, 
-    where('isActive', '==', true)
-  );
-  const querySnapshot = await getDocs(q);
-  const images = querySnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  } as GalleryImage));
-  return images.sort((a, b) => a.order - b.order);
+  try {
+    const q = query(publicImagesCollection, 
+      where('isActive', '==', true)
+    );
+    const querySnapshot = await getDocs(q);
+    const images = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    } as GalleryImage));
+    
+    // If no images from Firebase, return static images
+    if (images.length === 0) {
+      return staticImages;
+    }
+    
+    return images.sort((a, b) => a.order - b.order);
+  } catch (error) {
+    console.warn('Firebase unavailable, using static images:', error);
+    return staticImages;
+  }
 };
 
 export const getGalleryVideos = async (): Promise<GalleryVideo[]> => {
-  const q = query(publicVideosCollection, 
-    where('isActive', '==', true)
-  );
-  const querySnapshot = await getDocs(q);
-  const videos = querySnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
-  } as GalleryVideo));
-  return videos.sort((a, b) => a.order - b.order);
+  try {
+    const q = query(publicVideosCollection, 
+      where('isActive', '==', true)
+    );
+    const querySnapshot = await getDocs(q);
+    const videos = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    } as GalleryVideo));
+    
+    // If no videos from Firebase, return static videos
+    if (videos.length === 0) {
+      return staticVideos;
+    }
+    
+    return videos.sort((a, b) => a.order - b.order);
+  } catch (error) {
+    console.warn('Firebase unavailable, using static videos:', error);
+    return staticVideos;
+  }
 };
 
 export const addGalleryImage = async (image: Omit<GalleryImage, 'id'>): Promise<GalleryImage> => {

@@ -178,14 +178,29 @@ const Gallery = () => {
                     {videos.map((video) => (
                       <div key={video.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="aspect-video">
-                          <iframe
-                            className="w-full h-full"
-                            src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                            title={video.title}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
+                          {video.youtubeId.startsWith('local-video-') ? (
+                            <video
+                              className="w-full h-full object-cover"
+                              controls
+                              preload="metadata"
+                              poster="/placeholder.svg"
+                            >
+                              <source
+                                src={`/gallery/hvaf-video-${video.youtubeId.split('-')[2]}.mp4`}
+                                type="video/mp4"
+                              />
+                              Your browser does not support the video tag.
+                            </video>
+                          ) : (
+                            <iframe
+                              className="w-full h-full"
+                              src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                              title={video.title}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          )}
                         </div>
                         <div className="p-4">
                           <h3 className="text-xl font-semibold mb-2">{video.title}</h3>
